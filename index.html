@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Localizador Geográfico Global</title>
-    <!-- Asegúrate de tener tu archivo CSS aquí -->
+    <!-- Esto vincula tus estilos (Asegúrate de que style.css esté en la misma carpeta) -->
     <link rel="stylesheet" href="style.css">
-    <!-- Si usas Leaflet para el mapa, asegúrate de tener los links de la librería aquí -->
+    <!-- Estos enlaces cargan el mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Localizador Geográfico Global</h1>
-        <p>Consumo de API OpenStreetMap - Juana De La Luz Calva</p>
-    </header>
+    <h1>Localizador Geográfico Global</h1>
+    <p>Consumo de API OpenStreetMap - Juana De La Luz Calva</p>
     
-    <div class="contenedor-busqueda">
-        <input type="text" id="busqueda" placeholder="Introduce una ubicación...">
-        <button>Consultar API</button>
-    </div>
+    <input type="text" id="ubicacion" placeholder="M">
+    <button>Consultar API</button>
+    
+    <div id="map" style="height: 500px; width: 100%;"></div>
 
-    <div id="map"></div>
+    <script>
+        // Inicializar el mapa
+        var map = L.map('map').setView([19.4326, -99.1332], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    </script>
 </body>
 </html>
