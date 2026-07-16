@@ -1,9 +1,23 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-<head> 
-<title>App Meteorologica - JuanaDeLaLuzCalva</title> 
-</head> 
-<body> 
-<h1>Mapa Meteorol¢gico Integral - Juana</h1> 
-</body> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Localizador Geográfico Global</title>
+    <!-- Asegúrate de tener tu archivo CSS aquí -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Si usas Leaflet para el mapa, asegúrate de tener los links de la librería aquí -->
+</head>
+<body>
+    <header>
+        <h1>Localizador Geográfico Global</h1>
+        <p>Consumo de API OpenStreetMap - Juana De La Luz Calva</p>
+    </header>
+    
+    <div class="contenedor-busqueda">
+        <input type="text" id="busqueda" placeholder="Introduce una ubicación...">
+        <button>Consultar API</button>
+    </div>
+
+    <div id="map"></div>
+</body>
 </html>
